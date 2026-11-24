@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Advogado de Direito Médico e da Saúde em Joinville | Guilherme Hartwig</title>
-<meta name="description" content="Advogado para médicos, dentistas e profissionais da saúde em Joinville/SC: contratos e termos de consentimento para harmonização, empresa na saúde, glosas de planos, defesa nos conselhos e assessoria jurídica mensal. Guilherme Hartwig, OAB/SC 61.748.">
+<title>Advogado de Direito Médico em Joinville | Guilherme Hartwig</title>
+<meta name="description" content="Advogado de Direito Médico em Joinville/SC: assessoria jurídica para médicos e clínicas, empresa médica, contratos, glosas de planos de saúde e defesa no CRM. Também atende dentistas e profissionais da harmonização. Guilherme Hartwig, OAB/SC 61.748.">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="BKJelLMADOWEky8xuCCNfyTkMiRkS41sWdi_hSjPfwM" />
 <link rel="canonical" href="https://guilhermehartwig.github.io/">
@@ -23,7 +23,7 @@
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": "Guilherme Hartwig Advogado",
-  "alternateName": "Guilherme Hartwig - Advogado de Direito Médico e da Saúde em Joinville",
+  "alternateName": "Guilherme Hartwig - Direito Médico",
   "legalName": "Guilherme Hartwig Sociedade Individual de Advocacia",
   "description": "Advogado em Joinville/SC com atuação em Direito Médico, assessoria jurídica mensal para médicos e clínicas, Direito Tributário, Direito de Família, Planejamento Sucessório e Direito Civil.",
   "telephone": "+55-47-99680-0430",
@@ -67,7 +67,7 @@
      "acceptedAnswer": {"@type": "Answer", "text": "É um acompanhamento contínuo: o médico tira dúvidas pelo WhatsApp, envia contratos para revisão antes de assinar e recebe orientação preventiva sobre documentos do consultório, publicidade e reclamações de pacientes. O plano é definido conforme a fase da carreira e o porte do consultório ou clínica."}},
     {"@type": "Question", "name": "O plano de saúde glosou ou atrasou meus honorários. Posso cobrar?",
      "acceptedAnswer": {"@type": "Answer", "text": "Sim. Glosas sem justificativa técnica, atrasos e pagamentos abaixo do contratado podem ser contestados, primeiro com recurso à operadora e, se necessário, na Justiça. Guardar contratos, tabelas, guias e demonstrativos de pagamento é essencial para recuperar os valores."}},
-    {"@type": "Question", "name": "Recebi uma notificação do conselho profissional. O que fazer?",
+    {"@type": "Question", "name": "Recebi uma notificação do CRM. O que fazer?",
      "acceptedAnswer": {"@type": "Answer", "text": "Não responda por conta própria e observe o prazo. A primeira manifestação em uma sindicância pode definir o rumo do caso, por isso deve ser preparada com orientação de advogado, reunindo prontuário, termos e demais documentos."}},
     {"@type": "Question", "name": "O atendimento pode ser online?",
      "acceptedAnswer": {"@type": "Answer", "text": "Sim. O atendimento é presencial no Centro de Joinville ou por videochamada, para profissionais e clientes de qualquer cidade."}}
@@ -89,7 +89,9 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdro
 .marca-nome small{display:block;font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--cinza);font-weight:500}
 nav ul{display:flex;gap:22px;list-style:none;font-size:14px}
 .nav{gap:20px}
-nav a{text-decoration:none;color:var(--cinza)}
+nav a{text-decoration:none;color:var(--cinza);white-space:nowrap}
+.marca{flex-shrink:0}
+.marca-nome{white-space:nowrap}
 nav a:hover{color:var(--petroleo)}
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--petroleo);color:#fff;text-decoration:none;padding:14px 26px;border-radius:4px;font-weight:500;font-size:15px;transition:background .2s}
 .btn:hover{background:var(--petroleo-esc)}
@@ -184,10 +186,18 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
 .esteto .balanco{transform-origin:200px 40px;animation:balanco 7s ease-in-out 2.2s infinite}
 .esteto .pulso{opacity:0;transform-origin:306px 352px;animation:pulso 2.4s ease-out 2.4s infinite}
 .esteto .ecg{stroke:rgba(201,164,92,.55);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:.38 .62;stroke-dashoffset:1;animation:ecg 2.4s linear infinite}
+.seletor{display:inline-flex;flex-wrap:wrap;gap:6px;padding:5px;border:1px solid rgba(201,164,92,.45);border-radius:28px;margin-bottom:30px;background:rgba(255,255,255,.04)}
+.seletor button{font:inherit;font-size:14.5px;line-height:1.3;color:rgba(255,255,255,.85);background:transparent;border:0;border-radius:24px;padding:10px 18px;cursor:pointer;min-height:44px;text-align:left}
+.seletor button[aria-selected="true"]{background:var(--dourado);color:var(--petroleo-esc);font-weight:600}
+.seletor button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+body:not(.outros) [data-para="outros"]{display:none!important}
+body.outros [data-para="medico"]{display:none!important}
+.hero .rosto{justify-self:end}
 .publico{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .publico span{border:1px solid rgba(201,164,92,.55);color:#fff;padding:7px 14px;border-radius:999px;font-size:14px;background:rgba(255,255,255,.04)}
 .harm{background:radial-gradient(120% 120% at 85% 20%,#145a6b 0%,var(--petroleo-esc) 60%);color:#fff;position:relative;overflow:hidden}
-.harm-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center}
+.harm-grid{display:block}
+.harm .kit{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
 .harm h2{color:#fff;font-size:clamp(32px,4.2vw,48px);margin-bottom:16px}
 .harm .lead{color:rgba(255,255,255,.85);font-size:18px;margin-bottom:28px;max-width:600px}
 .kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin-bottom:30px}
@@ -213,7 +223,7 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
 @keyframes respira{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
 @keyframes halo{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
 @media(prefers-reduced-motion:reduce){.rosto *{animation:none!important}.rosto .traco-rosto{stroke-dashoffset:0}.rosto .ponto,.rosto .brilho{opacity:1}}
-@media(max-width:860px){.harm-grid{grid-template-columns:1fr;gap:28px}.rosto{max-width:240px;order:-1}}
+@media(max-width:860px){.rosto{max-width:230px;order:-1;justify-self:start!important;margin-bottom:-8px}}
 @media(max-width:1100px){nav ul{gap:16px;font-size:13.5px}}
 @media(max-width:1180px){nav ul{display:none}}
 @media(max-width:420px){.wrap.nav{padding:0 14px}.marca{gap:8px}.marca-nome{font-size:16px!important}.marca-nome small{font-size:8.5px!important;letter-spacing:.06em!important}.btn-sm{padding:8px 10px!important;font-size:12.5px!important}.marca svg{width:32px!important;height:32px!important}}
@@ -234,13 +244,12 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
   <div class="wrap nav">
     <a class="marca" href="#inicio" aria-label="Guilherme Hartwig Advogado">
       <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="2" fill="#0F4C5C"/><rect x="5" y="5" width="54" height="54" fill="none" stroke="#C9A45C" stroke-width="1"/><text x="32" y="42" font-family="Cormorant Garamond,Georgia,serif" font-size="27" font-weight="600" fill="#C9A45C" text-anchor="middle">GH</text></svg>
-      <span class="marca-nome">Guilherme Hartwig<small>Advogado · OAB/SC 61.748</small></span>
+      <span class="marca-nome">Guilherme Hartwig<small>Direito Médico</small></span>
     </a>
     <nav><ul>
-      <li><a href="#harmonizacao">Harmonização</a></li>
       <li><a href="#direito-medico">Direito Médico</a></li>
       <li><a href="#assessoria">Assessoria mensal</a></li>
-      <li><a href="#outras-areas">Outras áreas</a></li>
+      <li><a href="#harmonizacao">Outros profissionais</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul></nav>
@@ -252,19 +261,25 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Advogado de Direito Médico e da Saúde · Joinville/SC</div>
+      <div class="eyebrow">Guilherme Hartwig · Direito Médico</div>
+      <div class="seletor" role="tablist" aria-label="Escolha o seu perfil">
+        <button type="button" role="tab" data-alvo="medico" aria-selected="true">Sou médico</button>
+        <button type="button" role="tab" data-alvo="outros" aria-selected="false">Harmonização e outros profissionais da saúde</button>
+      </div>
       <h1>Você cuida dos seus pacientes. Eu cuido de você e da sua empresa.</h1>
       <div class="traco"></div>
-      <p>Assessoria jurídica para médicos, dentistas, profissionais da harmonização e da estética e clínicas: da abertura da empresa aos contratos, termos de consentimento, cobranças contra planos de saúde, defesa nos conselhos profissionais e proteção do patrimônio, com acompanhamento mensal para você atender com tranquilidade.</p>
+      <p data-para="medico">Assessoria jurídica para médicos e clínicas: da abertura da empresa aos contratos, termos de consentimento, cobranças contra planos de saúde, defesa no CRM e proteção do patrimônio, com acompanhamento mensal para você atender com tranquilidade.</p>
+      <p data-para="outros">Para dentistas, biomédicos, farmacêuticos, enfermeiros e clínicas de estética: termos de consentimento, contratos, uso de imagem, LGPD e defesa no seu conselho profissional, para você atender com segurança.</p>
       <div class="hero-acoes">
         <a class="btn btn-ouro" href="https://wa.me/5547996800430" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
-        <a class="btn btn-linha" href="#harmonizacao">Kit da Harmonização</a>
+        <a class="btn btn-linha" data-para="medico" href="#assessoria">Ver a assessoria mensal</a>
+        <a class="btn btn-linha" data-para="outros" href="#harmonizacao">Ver o Kit da Harmonização</a>
       </div>
-      <div class="publico" aria-label="Para quem atendo">
-        <span>Médicos</span><span>Dentistas</span><span>Harmonização e estética</span><span>Biomédicos</span><span>Enfermeiros</span><span>Fisioterapeutas</span><span>Psicólogos</span><span>Nutricionistas</span><span>Clínicas</span>
+      <div class="publico" data-para="outros" aria-label="Profissionais atendidos">
+        <span>Dentistas</span><span>Harmonização e estética</span><span>Biomédicos</span><span>Farmacêuticos</span><span>Enfermeiros</span><span>Fisioterapeutas</span><span>Psicólogos</span><span>Nutricionistas</span><span>Clínicas</span>
       </div>
     </div>
-    <svg class="esteto" viewBox="0 0 400 470" role="img" aria-label="Ilustração de um estetoscópio">
+    <svg class="esteto" data-para="medico" viewBox="0 0 400 470" role="img" aria-label="Ilustração de um estetoscópio">
       <defs>
         <linearGradient id="ouro" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stop-color="#E2C27E"/><stop offset=".55" stop-color="#C9A45C"/><stop offset="1" stop-color="#A9853F"/>
@@ -292,29 +307,7 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
         </g>
       </g>
     </svg>
-  </div>
-</section>
-
-<section id="harmonizacao" class="harm">
-  <div class="wrap harm-grid">
-    <div>
-      <span class="selo-kit">Destaque</span>
-      <div class="eyebrow">Harmonização orofacial e estética</div>
-      <h2>Kit Jurídico da Harmonização: seu procedimento protegido no papel</h2>
-      <p class="lead">Para dentistas, biomédicos, farmacêuticos, enfermeiros, médicos e clínicas de estética. Em procedimentos estéticos, a Justiça costuma ser mais exigente com o profissional, e um documento bem feito é a principal prova a seu favor.</p>
-      <div class="kit">
-        <div><strong>Termos de consentimento</strong><p>Um termo para cada procedimento: toxina botulínica, preenchedores, bioestimuladores, fios, skinbooster e outros.</p></div>
-        <div><strong>Contrato do procedimento</strong><p>Expectativa de resultado, número de sessões, retoques, cancelamento, reembolso e responsabilidades do paciente.</p></div>
-        <div><strong>Uso de imagem</strong><p>Autorização para fotos de antes e depois, prontuário e divulgação, dentro das regras do seu conselho.</p></div>
-        <div><strong>Anamnese e pós-procedimento</strong><p>Ficha de anamnese com declaração do paciente e orientações de cuidados assinadas.</p></div>
-        <div><strong>LGPD na clínica</strong><p>Tratamento de dados de saúde e fotos dos pacientes, com aviso de privacidade.</p></div>
-        <div><strong>Intercorrências</strong><p>Orientação e atuação em reclamações, notificações e processos de pacientes insatisfeitos.</p></div>
-      </div>
-      <div class="hero-acoes">
-        <a class="btn btn-ouro" href="https://wa.me/5547996800430?text=Ol%C3%A1%2C%20trabalho%20com%20harmoniza%C3%A7%C3%A3o%20e%20gostaria%20de%20saber%20sobre%20o%20Kit%20Jur%C3%ADdico%20da%20Harmoniza%C3%A7%C3%A3o." target="_blank" rel="noopener">Quero o Kit Jurídico</a>
-      </div>
-    </div>
-    <svg class="rosto" viewBox="0 0 320 400" role="img" aria-label="Ilustração de um rosto em perfil com pontos de harmonização">
+    <svg class="rosto" data-para="outros" viewBox="0 0 320 400" role="img" aria-label="Ilustração de um rosto em perfil com pontos de harmonização">
       <defs>
         <linearGradient id="ouro2" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stop-color="#E2C27E"/><stop offset=".6" stop-color="#C9A45C"/><stop offset="1" stop-color="#A9853F"/>
@@ -336,22 +329,44 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
   </div>
 </section>
 
+<section id="harmonizacao" class="harm" data-para="outros">
+  <div class="wrap harm-grid">
+    <div>
+      <span class="selo-kit">Outros profissionais da saúde</span>
+      <div class="eyebrow">Harmonização orofacial e estética</div>
+      <h2>Kit Jurídico da Harmonização: seu procedimento protegido no papel</h2>
+      <p class="lead">Para dentistas, biomédicos, farmacêuticos, enfermeiros, médicos e clínicas de estética. Em procedimentos estéticos, a Justiça costuma ser mais exigente com o profissional, e um documento bem feito é a principal prova a seu favor.</p>
+      <div class="kit">
+        <div><strong>Termos de consentimento</strong><p>Um termo para cada procedimento: toxina botulínica, preenchedores, bioestimuladores, fios, skinbooster e outros.</p></div>
+        <div><strong>Contrato do procedimento</strong><p>Expectativa de resultado, número de sessões, retoques, cancelamento, reembolso e responsabilidades do paciente.</p></div>
+        <div><strong>Uso de imagem</strong><p>Autorização para fotos de antes e depois, prontuário e divulgação, dentro das regras do seu conselho.</p></div>
+        <div><strong>Anamnese e pós-procedimento</strong><p>Ficha de anamnese com declaração do paciente e orientações de cuidados assinadas.</p></div>
+        <div><strong>LGPD na clínica</strong><p>Tratamento de dados de saúde e fotos dos pacientes, com aviso de privacidade.</p></div>
+        <div><strong>Intercorrências</strong><p>Orientação e atuação em reclamações, notificações e processos de pacientes insatisfeitos.</p></div>
+      </div>
+      <div class="hero-acoes">
+        <a class="btn btn-ouro" href="https://wa.me/5547996800430?text=Ol%C3%A1%2C%20trabalho%20com%20harmoniza%C3%A7%C3%A3o%20e%20gostaria%20de%20saber%20sobre%20o%20Kit%20Jur%C3%ADdico%20da%20Harmoniza%C3%A7%C3%A3o." target="_blank" rel="noopener">Quero o Kit Jurídico</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="direito-medico" class="destaque">
   <div class="wrap">
     <div class="titulo-secao">
-      <div class="eyebrow">Direito Médico e da Saúde</div>
-      <h2>Advogado para médicos, dentistas e profissionais da saúde em Joinville</h2>
-      <p>Atuação preventiva para o profissional da saúde trabalhar com segurança e, quando necessário, atuação judicial para defender os seus direitos e receber o que é seu. Atendimento a profissionais de Joinville e região, como Jaraguá do Sul, São Francisco do Sul, Araquari e São Bento do Sul, e de qualquer cidade por videochamada.</p>
+      <div class="eyebrow">Direito Médico</div>
+      <h2>Advogado para médicos e clínicas em Joinville</h2>
+      <p>Atuação preventiva para o médico trabalhar com segurança e, quando necessário, atuação judicial para defender os seus direitos e receber o que é seu. Atendimento a médicos de Joinville e região, como Jaraguá do Sul, São Francisco do Sul, Araquari e São Bento do Sul, e de qualquer cidade por videochamada.</p>
     </div>
     <div class="servicos">
       <article class="servico">
         <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
-        <h3>Empresa na saúde</h3>
-        <p>Abertura e estruturação da PJ, contrato social pensado para a entrada futura de sócios e registro da empresa no conselho profissional, em conjunto com o contador.</p>
+        <h3>Empresa médica</h3>
+        <p>Abertura e estruturação da PJ, contrato social pensado para a entrada futura de sócios e registro da empresa no CRM, em conjunto com o contador.</p>
       </article>
       <article class="servico">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 13l2 2 4-4"/></svg></div>
-        <h3>Contratos na saúde</h3>
+        <h3>Contratos médicos</h3>
         <p>Revisão e elaboração de contratos de plantão, cooperativa, credenciamento, convênios, locação de sala e prestação de serviço PJ, antes da assinatura.</p>
       </article>
       <article class="servico">
@@ -361,17 +376,17 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
       </article>
       <article class="servico">
         <div class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2-5 5-5s5 2 5 5M11 20c0-3 2-5 5-5s5 2 5 5"/></svg></div>
-        <h3>Sociedades e clínicas</h3>
-        <p>Acordo de sócios, regras de entrada e saída, retirada de sócio e reorganização de clínicas e empresas da área da saúde.</p>
+        <h3>Sociedades médicas</h3>
+        <p>Acordo de sócios, regras de entrada e saída, retirada de sócio e reorganização de clínicas e empresas médicas.</p>
       </article>
       <article class="servico">
         <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h4"/></svg></div>
-        <h3>Publicidade na saúde</h3>
-        <p>Orientação sobre redes sociais, fotos de antes e depois e divulgação do consultório conforme as regras do seu conselho (CFM, CFO, biomedicina e outros).</p>
+        <h3>Publicidade médica</h3>
+        <p>Orientação sobre redes sociais, site e divulgação do consultório conforme as regras do Conselho Federal de Medicina.</p>
       </article>
       <article class="servico">
         <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3M15 15h2"/></svg></div>
-        <h3>Glosas e planos de saúde</h3>
+        <h3>Médico x planos de saúde</h3>
         <p>Recuperação de glosas indevidas, atrasos e erros no pagamento de honorários, descredenciamento sem justa causa e descumprimento de contrato pelas operadoras, na negociação e na Justiça.</p>
         <a class="saiba" href="/glosa-plano-de-saude/">Entenda como recuperar glosas →</a>
       </article>
@@ -382,12 +397,12 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
       </article>
       <article class="servico">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-3 7h6zM19 7l-3 7h6z"/></svg></div>
-        <h3>Defesa do profissional</h3>
-        <p>Atuação em sindicâncias e processos ético-profissionais nos conselhos (CRM, CRO e outros) e em ações de responsabilidade civil por suposto erro.</p>
+        <h3>Defesa do médico</h3>
+        <p>Atuação em sindicâncias e processos ético-profissionais no CRM e em ações de responsabilidade civil por suposto erro médico.</p>
       </article>
       <article class="servico">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
-        <h3>Proteção patrimonial</h3>
+        <h3>Proteção patrimonial do médico</h3>
         <p>Holding familiar, pacto antenupcial e planejamento sucessório para separar o patrimônio da família dos riscos da atividade profissional.</p>
       </article>
       <article class="servico">
@@ -404,14 +419,14 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
     <div class="titulo-secao">
       <div class="eyebrow">Assessoria jurídica mensal</div>
       <h2>Um advogado acompanhando a sua carreira, mês a mês</h2>
-      <p>Para médicos, dentistas, profissionais da estética e demais profissionais da saúde. Em vez de procurar um advogado só quando o problema aparece, você consulta antes de assinar, de divulgar ou de responder. O plano acompanha a fase da sua carreira.</p>
+      <p>Em vez de procurar um advogado só quando o problema aparece, você consulta antes de assinar, de divulgar ou de responder. O plano acompanha a fase da sua carreira.</p>
     </div>
     <div class="tabela-wrap">
       <table class="planos">
         <thead>
           <tr>
             <th scope="col">O que está incluído</th>
-            <th scope="col">Start<small>Profissional PJ em início de carreira</small></th>
+            <th scope="col">Start<small>Médico PJ em início de carreira</small></th>
             <th scope="col" class="rec">Consultivo<small>Consultório ou clínica com equipe</small></th>
             <th scope="col">Blindado<small>Clínica com sócios e patrimônio</small></th>
           </tr>
@@ -419,7 +434,7 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
         <tbody>
           <tr><td>Atendimento pelo WhatsApp, com resposta em até 24 horas úteis</td><td class="ok"></td><td class="ok"></td><td class="ok"> Prioritário</td></tr>
           <tr><td>Revisão de contratos de plantão, credenciamento, locação de sala e prestação de serviço</td><td>Até 2 por mês</td><td class="ok"></td><td class="ok"></td></tr>
-          <tr><td>Orientação sobre publicidade e redes sociais conforme o seu conselho</td><td class="ok"></td><td class="ok"></td><td class="ok"></td></tr>
+          <tr><td>Orientação sobre publicidade médica e redes sociais</td><td class="ok"></td><td class="ok"></td><td class="ok"></td></tr>
           <tr><td>Atualização de termos de consentimento e documentos do consultório</td><td class="ok"></td><td class="ok"></td><td class="ok"></td></tr>
           <tr><td>Orientação em reclamações de pacientes</td><td class="ok"></td><td class="ok"></td><td class="ok"></td></tr>
           <tr><td>Alterações simples na empresa (endereço, atividades)</td><td class="ok"></td><td class="ok"></td><td class="ok"></td></tr>
@@ -427,7 +442,7 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
           <tr><td>Adequação à LGPD</td><td class="nao">—</td><td class="ok"></td><td class="ok"></td></tr>
           <tr><td>Suporte trabalhista básico</td><td class="nao">—</td><td class="ok"></td><td class="ok"></td></tr>
           <tr><td>Revisão societária anual</td><td class="nao">—</td><td class="nao">—</td><td class="ok"></td></tr>
-          <tr><td>Prioridade e condições diferenciadas em defesa nos conselhos e na Justiça</td><td class="nao">—</td><td class="nao">—</td><td class="ok"></td></tr>
+          <tr><td>Prioridade e condições diferenciadas em defesa no CRM e na Justiça</td><td class="nao">—</td><td class="nao">—</td><td class="ok"></td></tr>
           <tr><td>Reuniões de acompanhamento</td><td>Semestral</td><td>Semestral</td><td>Trimestral</td></tr>
         </tbody>
       </table>
@@ -497,7 +512,7 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
 <section id="sobre" class="sobre">
   <div class="wrap sobre-grid">
     <figure class="foto">
-      <img src="guilherme-hartwig-advogado-joinville.jpg" alt="Guilherme Hartwig, advogado de Direito Médico e da Saúde em Joinville" width="900" height="1125" loading="lazy">
+      <img src="guilherme-hartwig-advogado-joinville.jpg" alt="Guilherme Hartwig, advogado de Direito Médico em Joinville" width="900" height="1125" loading="lazy">
     </figure>
     <div>
       <div class="eyebrow">Sobre</div>
@@ -517,14 +532,14 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
   <div class="wrap">
     <div class="titulo-secao">
       <div class="eyebrow">Dúvidas frequentes</div>
-      <h2>Perguntas comuns de profissionais da saúde</h2>
+      <h2>Perguntas comuns de médicos</h2>
     </div>
-    <details><summary>Faço harmonização. Quais documentos preciso ter?</summary><p>No mínimo: termo de consentimento específico para cada procedimento, contrato com as condições do atendimento, autorização de uso de imagem, ficha de anamnese e orientações pós-procedimento assinadas. Modelos genéricos da internet costumam deixar lacunas justamente nos pontos discutidos em reclamações e processos.</p></details>
+    <details data-para="outros"><summary>Faço harmonização. Quais documentos preciso ter?</summary><p>No mínimo: termo de consentimento específico para cada procedimento, contrato com as condições do atendimento, autorização de uso de imagem, ficha de anamnese e orientações pós-procedimento assinadas. Modelos genéricos da internet costumam deixar lacunas justamente nos pontos discutidos em reclamações e processos.</p></details>
     <details><summary>Acabei a residência. Preciso abrir uma empresa?</summary><p>Na maioria dos casos, sim: hospitais, cooperativas e clínicas costumam contratar o médico como pessoa jurídica. A escolha entre empresa individual ou sociedade, o contrato social e o registro da empresa no CRM devem ser pensados desde o início, junto com o contador, para evitar correções caras depois.</p></details>
     <details><summary>O modelo de termo de consentimento da internet serve?</summary><p>Modelos genéricos raramente descrevem os riscos específicos do procedimento e da especialidade. Um termo bem redigido e aplicado corretamente é uma das principais provas a favor do médico em uma reclamação ou processo.</p></details>
     <details><summary>Como funciona a assessoria jurídica mensal para médicos?</summary><p>É um acompanhamento contínuo: o médico tira dúvidas pelo WhatsApp, envia contratos para revisão antes de assinar e recebe orientação preventiva sobre documentos do consultório, publicidade e reclamações de pacientes. O plano é definido conforme a fase da carreira e o porte do consultório ou clínica.</p></details>
     <details><summary>O plano de saúde glosou ou atrasou meus honorários. Posso cobrar?</summary><p>Sim. Glosas sem justificativa técnica, atrasos e pagamentos abaixo do contratado podem ser contestados, primeiro com recurso à operadora e, se necessário, na Justiça. Guardar contratos, tabelas, guias e demonstrativos de pagamento é essencial para recuperar os valores. <a href="/glosa-plano-de-saude/" style="color:var(--petroleo)">Veja o passo a passo</a>.</p></details>
-    <details><summary>Recebi uma notificação do conselho profissional. O que fazer?</summary><p>Não responda por conta própria e observe o prazo. A primeira manifestação em uma sindicância pode definir o rumo do caso, por isso deve ser preparada com orientação de advogado, reunindo prontuário, termos e demais documentos.</p></details>
+    <details><summary>Recebi uma notificação do CRM. O que fazer?</summary><p>Não responda por conta própria e observe o prazo. A primeira manifestação em uma sindicância pode definir o rumo do caso, por isso deve ser preparada com orientação de advogado, reunindo prontuário, termos e demais documentos.</p></details>
     <details><summary>O atendimento pode ser online?</summary><p>Sim. O atendimento é presencial no Centro de Joinville ou por videochamada, para profissionais e clientes de qualquer cidade.</p></details>
   </div>
 </section>
@@ -557,7 +572,11 @@ table.planos{width:100%;border-collapse:collapse;min-width:640px;font-size:15px}
   <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
 <script>
-{const r=document.querySelector('.rosto');if(r){if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){r.classList.add('ativo');io.disconnect()}})},{threshold:.35});io.observe(r)}else r.classList.add('ativo')}}
+{const b=document.body,bt=document.querySelectorAll('.seletor button'),r=document.querySelector('.rosto');
+const modo=m=>{b.classList.toggle('outros',m==='outros');bt.forEach(x=>x.setAttribute('aria-selected',String(x.dataset.alvo===m)));if(m==='outros'&&r){r.classList.remove('ativo');void r.getBoundingClientRect();r.classList.add('ativo')}};
+bt.forEach(x=>x.addEventListener('click',()=>modo(x.dataset.alvo)));
+document.querySelectorAll('a[href="#harmonizacao"]').forEach(a=>a.addEventListener('click',()=>modo('outros')));
+if(location.hash==='#harmonizacao'||location.hash==='#outros')modo('outros');}
 </script>
 </body>
 </html>
